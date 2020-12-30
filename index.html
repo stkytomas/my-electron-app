@@ -12,13 +12,39 @@
     <!-- //
     <p> Please choose your measurement type:</p> -->
     <form>
-        <label for="button">
-Please choose your measurement type:
-        </label>
+        <label for="button">Choose your measurement type:</label>
         <input type="button" onclick=" alert( 'Ok! All calculations will be made in inches.') " value="Inches ">
         <input type="button" onclick="alert( 'Ok! All calculations will be made in centimeters.') " value="Centimeters ">
+        <br>
+        <br>
+        <label for="waist">Enter the waist circumference 
+            (Measured at the level of the waistband):
+        </label>
+        <input type="number" id="waist" name="waist" min="1">
+        <br>
+        <br>
+        <label for="waist">Enter the desired skirt length
+            (Measure from the waistband):</label>
+        <input type="number" id="length" name="length" min="1">
+        <br>
+        <br>
+        <label for="seam">Enter the desired seam allowance:</label>
+        <input type="number" id="seam" name="seam">
+        <br>
+        <br>
+        <h2>Choose skirt type</h2>
+        <input type="radio" id="skirtType1" name="skirtType1" value="full">
+        <label for="skirtType1">Full Circle</label><br>
+        <input type="radio" id="skirtType2" name="skirtType2" value="3/4">
+        <label for="skirtType2">3/4 Circle</label><br>
+        <input type="radio" id="skirtType3" name="skirtType3" value="1/2">
+        <label for="skirtType3">1/2 Circle</label><br>
+        <input type="radio" id="skirtType4" name="skirtType4" value="1/4">
+        <label for="skirtType4">1/4 Circle</label><br>
     </form>
 </body>
+
+<br><br>
 <footer>
     Created with node
     <script>
