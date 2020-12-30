@@ -3,24 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Circle Skirt Calculator App</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 </head>
 
 <body style="background: white;">
-    <h1>Hello World!</h1>
-    <p>
-        We are using node
-        <script>
-            document.write(process.versions.node)
-        </script>, Chrome
-        <script>
-            document.write(process.versions.chrome)
-        </script>, and Electron
-        <script>
-            document.write(process.versions.electron)
-        </script>.
-    </p>
+    <h1>Welcome to the Circle Skirt Calculator App!</h1>
+    <!-- //
+    <p> Please choose your measurement type:</p> -->
+    <form>
+        <label for="button">
+Please choose your measurement type:
+        </label>
+        <input type="button" onclick=" alert( 'Ok! All calculations will be made in inches.') " value="Inches ">
+        <input type="button" onclick="alert( 'Ok! All calculations will be made in centimeters.') " value="Centimeters ">
+    </form>
 </body>
+<footer>
+    Created with node
+    <script>
+        document.write(process.versions.node)
+    </script>, Chrome
+    <script>
+        document.write(process.versions.chrome)
+    </script>, and Electron
+    <script>
+        document.write(process.versions.electron)
+    </script>.
+</footer>
 
 </html>
