@@ -1,11 +1,11 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: false
         }
     })
 
@@ -26,9 +26,11 @@ app.on('activate', () => {
     }
 })
 
+//the below can't work until renderer.js is finished and index.html is linked to that .js file
+
 let results = document.querySelector("results");
 
-app.addListener("submit", function(formValidation) {
+ipcMain.handle("submit", function(document) {
     let waist = document.querySelector("input[name=waist]");
     let circumference = waist.value;
     let waistC = Number(circumference);
